@@ -119,7 +119,8 @@ export default {
   display: flex;
   justify-content: center;
   height: 100vh;
-  padding-top: 50px;
+  padding-top: 100px;
+  align-items: flex-start;
   &__view {
     width: 450px;
     display: flex;
