@@ -115,12 +115,11 @@ export default {
   color: #81b3f1;
 }
 .container {
-  padding-top: 15px;
   background: #1e1e1e;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
+  padding-top: 50px;
   &__view {
     width: 450px;
     display: flex;
@@ -149,6 +148,7 @@ export default {
    flex-direction: column;
    height: auto;
    width: 100%;
+   padding-top: 30px;
    &__view {
     width: 100%;
     &__div {
