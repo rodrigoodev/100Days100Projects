@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contate-me</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+        
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Muli';
+        }
+        input:focus, textarea:focus,
+        keygen:focus, select:focus {
+            outline-offset: -2px;
+        }
+
+input:focus {
+  outline-offset: 0;
+}
+        .container{
+            width: 100%;
+            height: 100vh;
+            background: #9D50BB;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #6E48AA, #9D50BB);  
+            background: linear-gradient(to right, #6E48AA, #9D50BB); 
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+
+        .container__form, .mensagem__success{
+            max-width: 450px;
+            margin:0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+
+            transition: visibility 0.2s, opacity 0.2s linear;
+        }
+
+        .container__form__header{
+            text-align: center;
+        }
+
+        .container__form__header p{
+            margin:30px 0;
+            color:#7f8c8d;
+            text-align: start;
+        }
+
+        .container__form__content{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container__form__content button{
+
+            color: white;
+            font-family: 'Muli';
+            font-size:1.2em;
+            margin: 10px 0 0 ;
+            padding: 10px;
+            border: none;
+            background: #9D50BB;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #6E48AA, #9D50BB);  
+            background: linear-gradient(to right, #6E48AA, #9D50BB); 
+        }
+
+        .container__form__content input, textarea{
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 1px solid;
+            border-image-source: #7f8c8d;
+            border-image-source: linear-gradient(to right, #7f8c8d, #7f8c8d);
+            border-image-source: -webkit-linear-gradient(to right, #7f8c8d, #7f8c8d);
+            border-image-slice: 1;
+            font-size:1.1em
+        }
+
+        .container__form__content input:focus, textarea:focus{
+            border: 1px solid;
+            border-image-source: #9D50BB;
+            border-image-source: linear-gradient(to right, #6E48AA, #9D50BB);
+            border-image-source: -webkit-linear-gradient(to right, #6E48AA, #9D50BB);
+            border-image-slice: 1;
+            outline:none;
+            
+        }
+
+        label{
+            margin-bottom:5px;
+            font-size:1.1em
+        }
+
+        textarea {
+        resize: none;
+        height: 100px;
+        }
+       
+        .displayNone{
+            visibility: hidden !important;
+            opacity: 0;
+        }
+
+        .displayNoneTrue{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container__form" id="container__form">
+            <div class="container__form__header" >
+                <h1>Send me a message &#128540;</h1>
+                <p>Sinta-se a vontade a enviar uma mensagem, seu feedback é muito importante para continuarmos evoluindo nosso produto, responderemos mais rápido do que o Usain Bolt &#127939;</p>
+            </div>
+            <form id="form">
+            <div class="container__form__content">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" placeholder="Ex: Rodrigo Gabriel" autocomplete="off">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Digite o seu melhor email aqui..." autocomplete="off">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem"></textarea>
+                    <button id="submit">Enviar</button>
+               
+            </div>
+        </form>
+        </div>
+        <div class="mensagem__success displayNone displayNoneTrue" id="mensagem__success" style="text-align:center">
+            <h1 style="margin-bottom: 10px;">Gratidão!</h1>
+            Recebemos sua mensagem, muito obrigado pelo seu feedback, seu tempo é muito precioso pra gente, tenha um maravilhoso dia e todo sucesso pra voce meu/minha querido(a)!  <br><span style='font-size:50px; text-align: center; display: block;'>&#128525;</span>
+        </div>
+    </div>
+    <script>
+
+    function isValid(){
+        let texto = document.getElementById("mensagem").value
+
+        if(texto.length > 0) return true
+        else return false
+    }
+    document.getElementById("submit").addEventListener("click", function(event){
+        event.preventDefault()
+        
+        if(isValid()){
+            var element = document.getElementById("container__form");
+            element.classList.add("displayNone");
+            
+
+            setTimeout(function(){ 
+                element.classList.add("displayNoneTrue"); 
+                setTimeout(function(){
+                    var success = document.getElementById("mensagem__success")
+                    success.classList.remove("displayNoneTrue");
+                    success.classList.remove("displayNone");
+                }, 100)
+            }, 200);
+
+            
+        }
+    });
+    </script>
+</body>
+</html>
