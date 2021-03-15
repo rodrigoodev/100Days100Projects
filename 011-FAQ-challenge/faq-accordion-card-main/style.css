@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+body {
+  background: -webkit-linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  display: flex;
+}
+.container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-faq {
+  width: 1100px;
+  height: auto;
+  border-radius: 35px;
+  background: white;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-faq-bg {
+  width: 550px;
+  height: 100%;
+  background-image: url(images/bg-pattern-desktop.svg);
+  background-position: left -500px bottom -120px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.container-faq-img {
+  width: 550px;
+  height: 100%;
+  background-image: url(images/illustration-woman-online-desktop.svg);
+  background-position: left -100px bottom 100px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.container-faq-box {
+  width: 550px;
+  height: 100%;
+  background-image: url(images/illustration-box-desktop.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 250px;
+  left: -100px;
+}
+
+.container-faq-answer {
+  width: 550px;
+  height: 100%;
+  border-radius: 35px;
+  padding: 90px 0;
+}
+
+h1 {
+  color: hsl(238, 29%, 16%);
+  margin-bottom: 30px;
+}
+
+/*ACORDION*/
+.accordion {
+  background-color: white;
+  color: hsl(237, 12%, 33%);
+  cursor: pointer;
+  padding: 18px 0;
+  width: 80%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.active:hover {
+  font-weight: 700;
+  color: hsl(237, 12%, 33%);
+}
+
+.accordion:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.accordion:after {
+  content: "";
+  width: 10px;
+  height: 8px;
+  transform: rotate(0);
+  transition: transform 0.2s linear;
+  background-image: url(/images/icon-arrow-down.svg);
+  background-repeat: none;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "";
+  width: 10px;
+  height: 8px;
+  transform: rotate(180deg);
+  background-image: url(/images/icon-arrow-down.svg);
+  background-repeat: none;
+}
+
+.panel {
+  width: 80%;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  transition: max-height 0.2s ease-out;
+  color: hsl(240, 6%, 50%);
+  font-size: 16px;
+  line-height: 1.4em;
+}
