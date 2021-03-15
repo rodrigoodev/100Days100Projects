@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin:0;
+    transition: background 0.2s linear, color 0.2s linear;
+    color: #292c35;
+}
+
+body.dark{
+    background-color: #292c35;
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+} 
+
+.checkbox:checked + .label {
+    background: #3498db;
+} 
+
+.label{
+    width: 50px;
+    height: 26px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #292c35;
+    border-radius: 50px;
+    position: relative;
+    transform: scale(1.5);
+   
+}
+
+.ball{
+    background-color: white;
+    position:absolute;
+    height: 22px;
+    width: 22px;
+    top:2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear
+}
+
+.fa-moon{
+    color: #ecf0f1;
+}
+
+.fa-sun{
+    color:#f1c40f
+}
