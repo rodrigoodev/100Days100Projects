@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./desing/desktop-design.jpg)
+![](https://github.com/RodrigoGabrielRB/100Days100Projects/blob/main/011-FAQ-challenge/faq-accordion-card-main/design/desktop-design.jpg?raw=true)
 
 Here is my app
 
