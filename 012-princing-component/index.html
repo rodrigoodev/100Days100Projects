@@ -1,52 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  Our Pricing
-  Annually
-  Monthly
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
+      * {
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
 
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
+      body {
+        height: 100vh;
+        margin: 0;
+        transition: background 0.2s linear, color 0.2s linear;
+        color: #292c35;
+      }
 
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      body.dark {
+        background-color: #292c35;
+        color: white;
+      }
+
+
+      .checkbox {
+        opacity: 0;
+        position: absolute;
+      }
+
+      .checkbox:checked + .label .ball {
+        transform: translateX(24px);
+      }
+
+      .checkbox:checked + .label {
+        background: ;
+      }
+
+      .label {
+        width: 50px;
+        height: 26px;
+        display: flex;
+        padding: 5px;
+        align-items: center;
+        justify-content: space-between;
+        background-color:hsl(236, 72%, 79%);
+        border-radius: 50px;
+        position: relative;
+      }
+
+      .ball {
+        background-color: white;
+        position: absolute;
+        height: 22px;
+        width: 22px;
+        top: 2px;
+        left: 2px;
+        border-radius: 50%;
+        transition: transform 0.2s linear;
+      }
+
+      
+      header{
+        margin: 0 auto;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .container__switch{
+        display: flex;
+        width: 200px;
+        justify-content: space-around;
+        margin:0 auto;
+      }
+
+      .container{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        padding: 40px;
+        align-items: center;
+        
+      }
+      .card{
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 0;
+        width: 300px;
+        text-align: center;
+        box-shadow: 10px 10px 20px #cdd7ee, -10px -10px 20px #cdd7ee;
+      }
+      .main{
+        padding: 50px 20px;
+        background: linear-gradient(180deg, hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+        color: white;
+        z-index: 1;
+      }
+
+      .main button{
+        border: 1px solid white;
+      }
+      
+      .card h2{
+        font-size:1em;
+        margin: 0;
+      }
+
+      .card h3{
+        font-size:3em;
+        margin: 20px 0;
+      }
+
+      .card ul{
+        list-style: none;
+        padding: 0;
+        margin:0;
+      }
+      .card ul li{
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        padding: 15px 0;
+      }
+      .card ul li:first-child{
+        border-top: 1px solid rgba(0,0,0,0.2);
+      }
+      .main ul li:first-child{
+        border-top: 1px solid rgba(255,255,255,0.2);
+      }
+      .main ul li{
+        border-color: rgba(255,255,255,0.2);
+      }
+      button{
+        background-color:hsl(237, 63%, 64%);
+        color:white;
+        width: 100%;
+        border: 1px solid white;
+        padding: 10px;
+        margin-top:20px; 
+        transition: all 0.2s linear;
+      }
+
+      button:hover{
+        background: white;
+        color:hsl(237, 63%, 64%);
+        border-color:hsl(237, 63%, 64%);
+        border: 1px solid hsl(237, 63%, 64%);
+      }
+
+      .main button{
+        background: white;
+        color:hsl(237, 63%, 64%);
+        transition: all 0.2s linear;
+      }
+
+      .main button:hover{
+        background-color:hsl(237, 63%, 64%);
+        color:white;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255,1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Nossos Planos</h1>
+      <nav class="container__switch">
+        <div>Mês</div>
+        <div>
+          <input type="checkbox" class="checkbox" id="checkbox" />
+          <label for="checkbox" class="label">
+            <div class="ball"></div>
+          </label>
+        </div>
+        <div>Anual</div>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="card">
+        <h2>Básico</h2>
+        <h3>R$ 19.99</h3>
+        <ul>
+          <li>500 GB Storage</li>
+          <li>2 Users Allowed</li>
+          <li>Send up to 3 GB</li>
+        </ul>
+        <button>Learn More</button>
+      </div>
+      <div class="card main">
+        <h2>Profissional</h2>
+        <h3>R$ 24.99 </h3>
+        <ul>
+          <li>1 TB Storage</li>
+          <li>5 Users Allowed</li>
+          <li>Send up to 10 GB</li>
+        </ul>
+        <button>Learn More</button>
+      </div>
+      <div class="card">
+        <h2>Deluxe</h2>
+        <h3>R$ 39.99</h3>
+        <ul>
+          <li>2 TB Storage </li>
+          <li>10 Users Allowed</li>
+          <li>Send up to 20 GB </li>
+        </ul>
+        <button>Learn More</button>
+      </div>
+    </section>
+
+    <script>
+      const checkbox = document.getElementById("checkbox");
+      const texto = document.getElementById("texto");
+      let isAnual = false
+
+      checkbox.addEventListener("change", () => {
+        //change theme
+        isAnual = !isAnual
+        
+        let lista = document.querySelectorAll(".card");
+        
+        if(isAnual){
+          lista[0].childNodes[3].innerHTML = "R$ 199.99";
+          lista[1].childNodes[3].innerHTML = "R$ 249.99";
+          lista[2].childNodes[3].innerHTML = "R$ 399.99";
+        }else{
+          lista[0].childNodes[3].innerHTML = "R$ 19.99";
+          lista[1].childNodes[3].innerHTML = "R$ 24.99";
+          lista[2].childNodes[3].innerHTML = "R$ 39.99";
+        }
+        
+
+       
+      });
+    </script>
+  </body>
 </html>
