@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](https://github.com/RodrigoGabrielRB/100Days100Projects/blob/main/011-FAQ-challenge/faq-accordion-card-main/design/desktop-design.jpg?raw=true)
+![](https://github.com/RodrigoGabrielRB/100Days100Projects/blob/main/012-princing-component/design/desktop-preview.jpg?raw=true)
 
 Here is my app
 
