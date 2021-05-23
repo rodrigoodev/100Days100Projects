@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --primary: #3498db;
+    --danger: #c0392b;
+    --warning: #f1c40f;
+    --disabled: #95a5a6;
+}
+
+/*CONFIG TELA*/
+.wrap{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+.container{
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #cdd7ee, -10px -10px 20px #cdd7ee;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container h1{
+    display: block;
+    width: 600px;
+    margin-bottom:20px;
+}
+
+.container-chk{
+    display: flex;
+    width: 200px;
+    align-items: center;
+    gap:15px;
+    margin-top:10px;
+}
+
+
+/*CONFIG TELA*/
+
+
+/*DEFAULT CHECKBOX*/
+.chk input {
+    display: none;
+  }
+  
+  .chk span {
+    border-radius: 4px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #1f2d30;
+  }
+  
+  .chk span i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    color: white;
+    font-size: 0.6em;
+    margin-top: 2px;
+  }
+  
+  .chk input:checked + span i{
+      color: black
+  }
+/*DEFAULT CHECKBOX*/
+
+/*large CHECKBOX*/
+.large-chk input {
+    display: none;
+  }
+  
+  .large-chk span {
+    border-radius: 4px;
+    width: 26px;
+    height: 26px;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #1f2d30;
+  }
+  
+  .large-chk span i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    color: white;
+    font-size: 0.8em;
+    margin-top: 6px;
+  }
+  
+  .large-chk input:checked + span i{
+      color: black
+  }
+/*large CHECKBOX*/
+
+/*PRIMARY*/
+.primary{
+    color: var(--primary);
+}
+.chk-primary span{
+border-color: var(--primary);
+}
+
+.chk-primary input:checked + span i{
+    color: white
+}
+
+.chk-primary input:checked + span{
+    background-color: var(--primary);
+}
+/*PRIMARY*/
+
+/*danger*/
+.danger{
+    color: var(--danger);
+}
+.chk-danger span{
+border-color: var(--danger);
+}
+
+.chk-danger input:checked + span i{
+    color: white
+}
+
+.chk-danger input:checked + span{
+    background-color: var(--danger);
+}
+/*danger*/
+
+/*warning*/
+.warning{
+    color: var(--warning);
+}
+.chk-warning span{
+border-color: var(--warning);
+}
+
+.chk-warning input:checked + span i{
+    color: white
+}
+
+.chk-warning input:checked + span{
+    background-color: var(--warning);
+}
+/*warning*/
+
+/*disabled*/
+.disabled{
+    color: var(--disabled);
+}
+input[type=checkbox][disabled] span{
+    border-color: var(--disabled);
+}
+
+input[type=checkbox][disabled] + span i{
+    color: var(--disabled)
+}
+
+input[type=checkbox][disabled] + span{
+    background-color: white;
+    border-color: var(--disabled);
+}
+/*disabled*/
