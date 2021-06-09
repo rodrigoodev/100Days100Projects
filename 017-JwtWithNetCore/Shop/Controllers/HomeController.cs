@@ -9,12 +9,11 @@ using Shop.Services;
 namespace Shop.Controllers
 {
    [Route("v1/account")]
-    public class HomeController : ControllerBase
+    public class HomeController : Controller
     {
-        [HttpPost]
-        [Route("login")]
+        [HttpPost("login")]
         [AllowAnonymous]
-        public async Task<ActionResult<dynamic>> Authenticate([FromBody]User model){
+        public IActionResult  Authenticate([FromBody]User model){
             
             var user = UserRepository.Get(model.Username, model.Password);
 
@@ -22,7 +21,7 @@ namespace Shop.Controllers
 
             var token = TokenService.GenerateToken(user);
             user.Password = "";
-            return new { user = user, token = token};
+            return Ok(new { user = user, token = token});
 
         }
 
