@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css boladao</title>
+    <link rel="stylesheet" href="global.css">
+    <script src='app.js'></script>>
+    <style>
+        .container
+        {
+            display: flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        
+        .container--text{
+            background:var(--color-background);
+            padding: 200px;
+            font-size: 2em;
+            color: var(--color-font);
+        }
+
+        nav{
+            display: flex;
+            justify-content: center;
+        }
+
+        nav div{
+            padding:20px;
+        }
+    </style>
+</head>
+<body class="yellow-theme">
+    <nav>
+        <div onclick="handlerClick('dark-theme')">Dark-Theme</div>
+        <div onclick="handlerClick('purple-theme')">Purple-Theme</div>
+        <div onclick="handlerClick('yellow-theme')">Yellow-Theme</div>
+    </nav>
+    <div class="container">
+        <div class="container--text">Controlando cores globais</div>
+    </div>
+
+</body>
+</html>

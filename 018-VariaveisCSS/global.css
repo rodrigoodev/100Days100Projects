@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*Definir todas as variaveis de cada tema do site*/
+.purple-theme{
+    --color-font: #fff;
+    --color-background: #8e44ad;
+}
+
+.yellow-theme{
+    --color-font: #000;
+    --color-background: #ffe217;
+}
+
+.dark-theme{
+    --color-font: #ECF0F1;
+    --color-background: #2C3E50;
+}
