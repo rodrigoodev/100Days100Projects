@@ -19,9 +19,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./assets/css/reset.css";
 @import "./assets/css/variables.css";
 
 h1 {
-  color: var(--color-primary);
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #fbfbfb;
 }
 </style>
