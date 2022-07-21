@@ -8,8 +8,6 @@
       Componentizar a lista
       Queria colocar alguns filtros para lista
       Componentizar o notification
-
-      é isso no mas me diria como contratado <3
       
      -->
 		<div class="header">
