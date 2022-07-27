@@ -35,7 +35,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1250px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
