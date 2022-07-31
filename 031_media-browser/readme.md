@@ -1,6 +1,4 @@
-# CSS media browser tutorial
-
-This is the supporting repo for [Build a responsive media browser with CSS](https://piccalil.li/tutorial/build-a-responsive-media-browser-with-css).
+# CSS media browser
 
 This runs off a little eleventy setup. To get started:
 
