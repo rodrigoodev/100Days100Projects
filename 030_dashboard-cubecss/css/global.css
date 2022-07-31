@@ -1,0 +1,461 @@
+/* GORKO: auto-generated utility classes start */
+.bg-primary {
+  background: #231651;
+}
+
+.bg-secondary {
+  background: #ff8484;
+}
+
+.bg-secondary-shade {
+  background: #ff5151;
+}
+
+.bg-tertiary {
+  background: #2c988c;
+}
+
+.bg-tertiary-glare {
+  background: #d6fff6;
+}
+
+.bg-quaternary {
+  background: #2374ab;
+}
+
+.bg-light {
+  background: #fafafa;
+}
+
+.bg-light-shade {
+  background: #eeeeee;
+}
+
+.bg-grey {
+  background: #c4c4c4;
+}
+
+.color-primary {
+  color: #231651;
+}
+
+.color-secondary {
+  color: #ff8484;
+}
+
+.color-secondary-shade {
+  color: #ff5151;
+}
+
+.color-tertiary {
+  color: #2c988c;
+}
+
+.color-tertiary-glare {
+  color: #d6fff6;
+}
+
+.color-quaternary {
+  color: #2374ab;
+}
+
+.color-light {
+  color: #fafafa;
+}
+
+.color-light-shade {
+  color: #eeeeee;
+}
+
+.color-grey {
+  color: #c4c4c4;
+}
+
+.font-base {
+  font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+}
+
+.font-mono {
+  font-family: "IBM Plex Mono", Courier New, Courier, monospace;
+}
+
+.gap-top-300 {
+  margin-top: 0.8rem;
+}
+
+.gap-top-400 {
+  margin-top: 1rem;
+}
+
+.gap-top-500 {
+  margin-top: 1.33rem;
+}
+
+.gap-top-600 {
+  margin-top: 1.77rem;
+}
+
+.gap-top-700 {
+  margin-top: 2.4rem;
+}
+
+.pad-top-300 {
+  padding-top: 0.8rem;
+}
+
+.pad-top-400 {
+  padding-top: 1rem;
+}
+
+.pad-top-500 {
+  padding-top: 1.33rem;
+}
+
+.pad-top-600 {
+  padding-top: 1.77rem;
+}
+
+.pad-top-700 {
+  padding-top: 2.4rem;
+}
+
+.text-300 {
+  font-size: 0.8rem;
+}
+
+.text-400 {
+  font-size: 1rem;
+}
+
+.text-500 {
+  font-size: 1.33rem;
+}
+
+.text-600 {
+  font-size: 1.77rem;
+}
+
+.text-700 {
+  font-size: 2.4rem;
+}
+
+.weight-medium {
+  font-weight: 500;
+}
+
+.weight-bold {
+  font-weight: 700;
+}
+
+@media (min-width: 48em) {
+  .md\:text-300 {
+    font-size: 0.8rem;
+  }
+  .md\:text-400 {
+    font-size: 1rem;
+  }
+  .md\:text-500 {
+    font-size: 1.33rem;
+  }
+  .md\:text-600 {
+    font-size: 1.77rem;
+  }
+  .md\:text-700 {
+    font-size: 2.4rem;
+  }
+}
+/* GORKO: auto-generated utility classes end */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+  padding-bottom: 1.77rem;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2,
+h3 {
+  font-size: 1.77rem;
+}
+
+a {
+  color: currentColor;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+:focus {
+  outline: 2px dotted;
+  outline-offset: 0.25rem;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.radius, .button {
+  border-radius: 0.5rem;
+}
+
+.splitter > :last-child {
+  margin-top: 1.33rem;
+}
+@media (min-width: 48em) {
+  .splitter {
+    display: flex;
+  }
+  .splitter > * {
+    flex-grow: 1;
+  }
+  .splitter > :last-child {
+    margin-top: 0;
+    margin-left: 1.33rem;
+    min-width: 22rem;
+  }
+}
+
+.wrapper {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.33rem;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.site-head {
+  padding: 0.8rem 0;
+}
+.site-head__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-head h1 {
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+
+.button {
+  font: inherit;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  border: 1px solid #ff8484;
+  background: #ff8484;
+  padding: 0.6rem 1.5rem;
+  position: relative;
+  font-weight: 700;
+}
+.button[data-variant=ghost] {
+  border-color: currentColor;
+  background: transparent;
+}
+.button:focus {
+  outline-offset: -0.4rem;
+  outline: 1px solid;
+}
+.button:hover {
+  background: #231651;
+  border-color: #231651;
+  color: #fafafa;
+}
+.button:active {
+  transform: scale(0.95);
+}
+
+.key-header {
+  align-items: flex-end;
+}
+.key-header > :last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.key-header > :last-child > * {
+  flex-shrink: 0;
+  margin: 0.2rem 0 0 0.2rem;
+}
+@media (min-width: 48em) {
+  .key-header > :last-child {
+    justify-content: flex-end;
+  }
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.3rem 0.35rem;
+  font-size: 1rem;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+}
+.pill:not([class*=bg-]) {
+  background: #c4c4c4;
+}
+[lang*=en] .pill {
+  text-transform: capitalize;
+}
+
+.summary {
+  padding: 1.33rem 1.33rem 1.77rem 1.33rem;
+  line-height: 1.1;
+}
+.summary dl,
+.summary dt {
+  --flow-space: 2.4rem;
+}
+.summary dd {
+  --flow-space: 0.8rem;
+}
+
+.table-group {
+  border: 1px solid #c4c4c4;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table-group h3 {
+  --flow-space: 1.77rem;
+}
+.table-group table {
+  --flow-space: 0.2rem;
+  width: 100%;
+  min-width: 30rem;
+}
+.table-group td,
+.table-group h3 {
+  padding: 0.5rem 1rem;
+}
+.table-group tr:first-child {
+  border-top: 1px solid #c4c4c4;
+}
+.table-group tr:nth-child(odd) td {
+  background: #eeeeee;
+}
+.table-group td:nth-child(3) {
+  text-align: right;
+}
+
+.user {
+  display: inline-grid;
+  align-items: center;
+  grid-template-columns: max-content 50px;
+  gap: 0.8rem;
+}
+.user img {
+  border-radius: 100%;
+}
+
+/*# sourceMappingURL=global.css.map */
