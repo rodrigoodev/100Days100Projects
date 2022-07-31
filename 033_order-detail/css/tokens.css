@@ -1,0 +1,12 @@
+:root {
+  --color-neutral-100: hsl(225, 100%, 98%);
+  --color-neutral-200: hsl(224, 23%, 55%);
+  --color-neutral-300: hsl(223, 47%, 23%);
+
+  --color-primary: hsl(225, 100%, 94%);
+  --color-primary: hsl(245, 75%, 52%);
+}
+
+body {
+  font-family: "Red Hat", sans-serif;
+}
