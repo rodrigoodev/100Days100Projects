@@ -1,0 +1,48 @@
+.site-head {
+  padding: 0.6rem 0;
+  background: var(--color-primary);
+  border-top: 5px solid var(--color-primary);
+  border-bottom: 5px solid var(--color-primary-shade);
+  color: var(--color-light);
+  line-height: 1.1;
+}
+
+.site-head :focus {
+  outline-color: var(--color-light);
+}
+
+.site-head__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.site-head__brand {
+  display: block;
+  width: 3rem;
+}
+
+.navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.8rem;
+  padding: 0;
+}
+
+.navigation li {
+  margin: 0.1rem;
+}
+
+.navigation a {
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: currentColor;
+}
+
+.navigation a:hover {
+  color: var(--color-dark);
+}

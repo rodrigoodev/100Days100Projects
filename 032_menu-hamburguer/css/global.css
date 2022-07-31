@@ -1,0 +1,65 @@
+:root {
+  --color-light: #ffffff;
+  --color-light-shade: #fafffd;
+  --color-dark: #062726;
+  --color-primary: #d81159;
+  --color-primary-shade: #b90f4c;
+}
+
+body {
+  background: var(--color-light-shade);
+  color: var(--color-dark);
+  line-height: 1.5;
+  font-family: "Hind", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2 {
+  font-family: "Halant", Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  line-height: 1.1;
+  max-width: 30ch;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+a {
+  color: currentColor;
+}
+
+:focus {
+  outline: 1px dotted currentColor;
+  outline-offset: 0.2rem;
+}
+
+p,
+li,
+dl {
+  max-width: 70ch;
+}
+
+article {
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+@media (min-width: 40em) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
