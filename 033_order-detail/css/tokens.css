@@ -1,12 +1,148 @@
 :root {
-  --color-neutral-100: hsl(225, 100%, 98%);
-  --color-neutral-200: hsl(224, 23%, 55%);
-  --color-neutral-300: hsl(223, 47%, 23%);
+  --color-blue-0000: hsl(225, 100%, 98%);
+  --color-blue-0100: hsl(225, 100%, 94%);
+  --color-blue-0200: hsl(224, 23%, 55%);
+  --color-blue-0300: hsl(245, 75%, 52%);
+  --color-blue-0400: hsl(223, 47%, 23%);
+  --color-white: hsl(255, 100%, 100%);
 
-  --color-primary: hsl(225, 100%, 94%);
-  --color-primary: hsl(245, 75%, 52%);
+  --color-primary: var(--color-blue-0300);
+  --color-secondary: var(--color-blue-0100);
+  --color-major: var(--color-blue-0400);
+
+  --fs-700: 1.75rem;
+  --fs-400: 1rem;
+  --fs-300: 0.875rem;
+
+  --weight-500: 500;
+  --weight-700: 700;
+  --weight-900: 900;
 }
 
 body {
-  font-family: "Red Hat", sans-serif;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--fs-400);
+  font-weight: var(--weight-500);
+  color: var(--color-major);
+  background-color: var(--color-secondary);
+
+  /* for demo */
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--fs-700);
+}
+
+/* composition */
+
+.flow > * + * {
+  margin-top: 1rem;
+}
+
+.grid-flow {
+  display: grid;
+  gap: 1rem;
+}
+
+.flex-flow {
+  display: flex;
+  gap: 1rem;
+}
+
+/* utility */
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-start {
+  text-align: left;
+}
+
+.text-align-end {
+  text-align: right;
+}
+
+.padding-24 {
+  padding: 1.5rem;
+}
+
+.padding-48 {
+  padding: 3rem;
+}
+
+.text-dark {
+  color: var(--color-primary);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-blue-0000 {
+  background-color: var(--color-blue-0000);
+}
+
+.font-weight-500 {
+  font-weight: var(--weight-500);
+}
+
+.font-weight-700 {
+  font-weight: var(--weight-700);
+}
+
+.font-weight-900 {
+  font-weight: var(--weight-900);
+}
+
+.push-left {
+  margin-left: auto;
+}
+
+.link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button {
+  border: none;
+  padding: 16px;
+  font-size: var(--fs-300);
+  font-weight: var(--weight-700);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.button[data-state="primary"] {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button[data-state="primary"]:hover {
+  background-color: var(--color-blue-0200);
+}
+
+.button[data-state="secondary"] {
+  background-color: transparent;
+}
+
+/* blocks */
+
+.card {
+  max-width: 450px;
 }
