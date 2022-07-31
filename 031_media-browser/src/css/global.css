@@ -1,0 +1,148 @@
+body {
+  padding: 2.5rem 1.5rem;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  background: #ffffff;
+  color: #333333;
+}
+
+main {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+main > * + * {
+  margin-top: 2em;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+p {
+  max-width: 60ch;
+}
+
+a {
+  color: currentColor;
+}
+
+:focus {
+  outline: 1px dashed;
+  outline-offset: 0.25rem;
+}
+
+/* Video player */
+.video-player {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video-player > * {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skip-link {
+  display: inline-block;
+  padding: 0.5rem 1.5rem 0.6rem 1.5rem;
+  background: #efd6da;
+  border: 1px solid #cccccc;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 99;
+  text-decoration: none;
+}
+
+.skip-link:not(:focus) {
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.media-browser {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+  box-shadow: 0 0 2.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.media-browser__nav {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 16rem;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.media-browser__video {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 60%;
+  background: black;
+}
+
+.media-browser__nav > * {
+  flex-basis: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  position: relative;
+  min-height: 10rem;
+}
+
+.media-browser__links > * + * {
+  border-top: 1px solid #cccccc;
+}
+
+.media-browser__links a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  line-height: 1.2;
+  background: #f3f3f3;
+}
+
+.media-browser__links :hover {
+  background: #e5bec4;
+}
+
+.media-browser__links :focus {
+  outline-offset: -0.25rem;
+}
+
+.media-browser__links a[aria-current="page"] {
+  border-left: 0.4rem solid #444444;
+}
+
+::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8eef0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444444;
+}
+
+/* Color order: thumb, then track */
+* {
+  scrollbar-color: #444444 #f8eef0;
+}
